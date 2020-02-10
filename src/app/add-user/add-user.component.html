@@ -1,0 +1,40 @@
+<h3>Criar novo Usuário</h3>
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nome"
+      required
+      [(ngModel)]="usuario.nome"
+      name="nome"
+    />
+  </div>
+  <div>
+    <label for="nome">Email</label>
+    <input
+      type="text"
+      class="form-control"
+      id="email"
+      required
+      [(ngModel)]="usuario.email"
+      name="nome"
+    />
+  </div>
+  <div>
+    <label for="nome">Senha</label>
+    <input
+      type="text"
+      class="form-control"
+      id="senha"
+      required
+      [(ngModel)]="usuario.senha"
+      name="nome"
+    />
+  </div>
+  <br />
+  <button type="submit" class="btn btn-outline-success">
+    Cadastrar
+  </button>
+</form>

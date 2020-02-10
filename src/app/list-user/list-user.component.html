@@ -1,0 +1,37 @@
+<table width="467" border="1px">
+  <tr>
+    <td width="101" height="40">ID</td>
+    <td width="101" height="40">Nome</td>
+    <td width="101" height="40">Email</td>
+    <td width="101" height="40">Senha</td>
+    <td width="101" height="40">Deleção</td>
+    <td width="101" height="40">Alteração</td>
+  </tr>
+
+  <tbody>
+    <tr *ngFor="let usuario of usuarios | async">
+      <td>{{ usuario.id }}</td>
+      <td>{{ usuario.nome }}</td>
+      <td>{{ usuario.email }}</td>
+      <td>{{ usuario.senha }}</td>
+      <td>
+        <button
+          (click)="deleteUsuario(usuario.id)"
+          class="btn btn-outline-danger"
+          style="margin-left: 5px;"
+        >
+          Deletar
+        </button>
+      </td>
+      <td>
+        <button
+          class="btn btn-outline-warning"
+          style="margin-left: 5px;"
+          (click)="updateUsuario(usuario.id)"
+        >
+          Alterar
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
